@@ -34,21 +34,30 @@ class MainScreen extends StatelessWidget {
                     controller.setTableIndex = value;
                   },
                   currentIndex: controller.tabIndex,
-                  items: const [
+                  items: [
                     BottomNavigationBarItem(
-                      icon: Icon(AntDesign.appstore1),
+                      icon: controller.tabIndex == 0
+                          ? const Icon(AntDesign.appstore1)
+                          : const Icon(AntDesign.appstore_o),
                       label: 'Home',
                     ),
-                    BottomNavigationBarItem(
+                    const BottomNavigationBarItem(
                       icon: Icon(Icons.search),
                       label: 'Search',
                     ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.shopping_cart),
+                    const BottomNavigationBarItem(
+                      icon: Badge(
+                        label: Text('1'),
+                        child: Icon(
+                          FontAwesome.opencart,
+                        ),
+                      ),
                       label: 'Cart',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.person),
+                      icon: controller.tabIndex == 3
+                          ? const Icon(FontAwesome.user_circle)
+                          : const Icon(FontAwesome.user_circle_o),
                       label: 'Profile',
                     ),
                   ],
