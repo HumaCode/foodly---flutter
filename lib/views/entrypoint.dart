@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:foody/constants/constants.dart';
 import 'package:foody/controllers/tab_index_controller.dart';
 import 'package:get/get.dart';
@@ -35,7 +36,7 @@ class MainScreen extends StatelessWidget {
                   currentIndex: controller.tabIndex,
                   items: const [
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.home),
+                      icon: Icon(AntDesign.appstore1),
                       label: 'Home',
                     ),
                     BottomNavigationBarItem(
