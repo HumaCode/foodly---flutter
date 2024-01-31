@@ -38,6 +38,7 @@ class MainScreen extends StatelessWidget {
                 child: BottomNavigationBar(
                   showSelectedLabels: false,
                   showUnselectedLabels: false,
+                  elevation: 0,
                   unselectedIconTheme:
                       const IconThemeData(color: Colors.black38),
                   selectedIconTheme: const IconThemeData(color: kSecondary),
