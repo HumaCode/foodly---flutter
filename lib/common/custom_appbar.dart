@@ -51,9 +51,9 @@ class CustomAppbar extends StatelessWidget {
                 ),
               ],
             ),
-            const Text(
-              "❄️",
-              style: TextStyle(fontSize: 35),
+            Text(
+              getTimeOfDay(),
+              style: const TextStyle(fontSize: 35),
             ),
           ],
         ),
@@ -63,14 +63,14 @@ class CustomAppbar extends StatelessWidget {
 
   String getTimeOfDay() {
     DateTime now = DateTime.now();
-    int hour = now.hour();
+    int hour = now.hour;
 
     if (hour >= 0 && hour < 12) {
-      return "";
+      return "☀️";
     } else if (hour >= 12 && hour < 16) {
-      return "";
+      return "⛅";
     } else {
-      return "";
+      return "🌙";
     }
   }
 }
