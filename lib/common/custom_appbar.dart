@@ -18,32 +18,38 @@ class CustomAppbar extends StatelessWidget {
         margin: EdgeInsets.only(top: 20.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            CircleAvatar(
-              radius: 25.r,
-              backgroundColor: kSecondary,
-              backgroundImage: const NetworkImage(
-                  "https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 6.h, left: 8.w),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ReusableText(
-                      text: "Deliver to ",
-                      style: appStyle(13, kSecondary, FontWeight.w600)),
-                  SizedBox(
-                    width: width * 0.65,
-                    child: Text(
-                      '23423423 Kajen',
-                      overflow: TextOverflow.ellipsis,
-                      style: appStyle(12, kGrayLight, FontWeight.w400),
-                    ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                CircleAvatar(
+                  radius: 22.r,
+                  backgroundColor: kSecondary,
+                  backgroundImage: const NetworkImage(
+                      "https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 6.h, left: 8.w),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ReusableText(
+                          text: "Deliver to ",
+                          style: appStyle(13, kSecondary, FontWeight.w600)),
+                      SizedBox(
+                        width: width * 0.65,
+                        child: Text(
+                          '23423423 Kajen',
+                          overflow: TextOverflow.ellipsis,
+                          style: appStyle(12, kGrayLight, FontWeight.w400),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             const Text(
               "❄️",
